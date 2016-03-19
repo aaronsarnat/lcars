@@ -1,0 +1,45 @@
+html.federation(lang="en-us")
+  head
+    include /_inc/meta.jade
+    title LCARS Demo
+  body
+    //- Begin Page-Specific Content
+
+
+
+    .container
+      .flex-container
+  
+        section.style-yellow.bar-top.bar-left
+
+          h2.text-case-uppercase.style-orange(style="font-size:4em; margin-bottom:.5em;")
+            span.left-section
+            span.primary.font-orange Tactical
+            span.end-cap
+
+          .section-row
+            .menu
+              .tab.disabled.color-1.align-v-bottom.tail-connect(style="min-height: 1em;")
+                span System Override
+                svg(viewBox="0 0 50 50" width="50px" height="50px")
+                  path(d="M0,0v50h50C22.4,50,0,27.6,0,0z")
+              .tab.tappable.color-3(style="min-height: 1em;")
+                span Configuration
+              .tab.tappable.color-2.align-v-center(style="max-height: 4em;")
+                span Settings
+            .content
+              .tail
+                .bar.color-1
+                .bar.color-3
+                .bar.color-2
+      
+              h2.text-case-uppercase.style-blue
+                span.left-section
+                span.subhead.font-black.font-bold Kernel Version
+                span.primary.font-orange.text-case-normal 3.2.0-29-generic-pae
+                span.end-cap
+
+
+
+    //- END Page-Specific Content
+    include /_inc/scripts.jade

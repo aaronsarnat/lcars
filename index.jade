@@ -1,0 +1,149 @@
+html.federation(lang="en-us")
+  head
+    include /_inc/meta.jade
+    title LCARS Demo
+  body
+    //- Begin Page-Specific Content
+
+
+
+    .container
+      .flex-container
+      
+        section.style-yellow.bar-bottom.bar-left
+          h2.text-case-uppercase.style-blue
+            //(style="font-size:4em; margin-bottom:.5em;")
+            span.subhead.font-black.font-bold Kernel Version
+            span.primary.font-orange Engineering
+            span.end-cap
+          .section-row
+            .menu
+              .tab.disabled.color-1.align-v-bottom(style="min-height: 1em;")
+                span 098327
+              .tab.tappable.beep2.color-3(style="min-height: 1em;")
+                span 3371
+              #mode-toggle.tab.tappable.color-2.tail-connect(style="min-height: 1em;")
+                span Mode Select
+                svg(viewBox="0 0 50 50" width="50px" height="50px")
+                  path(d="M0,0v50h50C22.4,50,0,27.6,0,0z")
+            .content
+              table
+                tr
+                  th System
+                  th Override
+                  th Memory
+                  th(style="width: 50%;") Config
+                tr
+                  td 03323
+                  td 99723
+                  td 31211
+                  td more /etc/inetd.config
+                tr
+                  td 03323
+                  td 99723
+                  td 31211
+                  td ps -ax | more
+                tr
+                  td 03323
+                  td 99723
+                  td 31211
+                  td -1000 /var/log/system.log | more
+                tr
+                  td 03323
+                  td 99723
+                  td 31211
+                  td -p -e 's/\r/\n/g' macfile.txt >unixfile.txt
+
+              .tail
+                .bar.color-2
+                .bar.color-1
+  
+  
+        section.style-yellow.bar-top.bar-left(style="flex: 1.8;")
+          .section-row
+            .menu
+              .tab.disabled.color-1.align-v-bottom.tail-connect(style="min-height: 1em;")
+                span System Override
+                svg(viewBox="0 0 50 50" width="50px" height="50px")
+                  path(d="M0,0v50h50C22.4,50,0,27.6,0,0z")
+              .tab.tappable.color-3(style="min-height: 1em;")
+                span Configuration
+              .tab.tappable.color-2.align-v-center(style="max-height: 4em;")
+                span Settings
+            .content
+
+              h2.text-case-uppercase.style-blue
+                //span.left-section
+                span.subhead.font-black.font-bold Kernel Version
+                span.primary.font-orange.text-case-normal 3.2.0-29-generic-pae
+                span.end-cap
+
+              table.button-grid
+                tr
+                  td
+                    button.btn.tappable.btn-round.pipe-left
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round.pipe-right
+                      span.label-inner 00937
+                      span.label-outer 221
+                  td
+                    button.btn.tappable.btn-round.cap-left
+                      span.label-inner 00937
+                      span.label-outer 141
+                  td
+                    button.btn.tappable.btn-round.cap-right
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round.cap-left
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round
+                      span.label-inner 00937
+                tr
+                  td
+                    button.btn.tappable.pipe-left.pipe-right
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.pipe-left.cap-right
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.cap-left.pipe-right
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round.cap-right
+                      span.label-inner 00937
+                tr
+                  td
+                    button.btn.tappable.btn-round.flat-right
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round.flat-left
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round.flat-right
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable.btn-round.flat-left
+                      span.label-inner 00937
+                  td
+                    button.btn.tappable
+                      span.label-inner 00937
+                  td
+
+
+              .tail
+                .bar.color-1
+                .bar.color-3
+                .bar.color-2
+
+
+
+    //- END Page-Specific Content
+    include /_inc/scripts.jade

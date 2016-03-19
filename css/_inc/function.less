@@ -1,0 +1,186 @@
+// Flex Functions
+
+.fn-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.fn-flex-item(@columns: initial) {
+  -webkit-flex: @columns;
+  -moz-flex: @columns;
+  -ms-flex: @columns;
+  flex: @columns;
+}
+
+.fn-flex-align-items(@align: flex-start) {
+  -webkit-align-items: @align;
+  -moz-align-items: @align;
+  -ms-flex-align: @align;
+  align-items: @align;
+}
+
+.fn-flex-direction(@direction) {
+  -webkit-flex-direction: @direction;
+  -moz-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+}
+
+.fn-flex-wrap(@wrap) {
+  -webkit-flex-wrap: @wrap;
+  -moz-flex-wrap: @wrap;
+  -ms-flex-wrap: @wrap;
+  flex-wrap: @wrap;
+}
+
+.fn-flex-justify(@justify) {
+  -webkit-justify-content: @justify;
+  -moz-justify-content: @justify;
+  -ms-justify-content: @justify;
+  justify-content: @justify;
+}
+
+.fn-flex-align-items(@align) {
+  -webkit-align-items: @align;
+  -moz-align-items: @align;
+  -ms-flex-align: @align;
+  align-items: @align;
+}
+
+.fn-flex-basis(@value) {
+  -webkit-flex-basis: @value;
+  -moz-flex-basis: @value;
+  -ms-flex-basis: @value;
+  flex-basis: @value;
+}
+
+.fn-flex-grow(@value) {
+  -webkit-flex-grow: @value;
+  -moz-flex-grow: @value;
+  -ms-flex-grow: @value;
+  flex-grow: @value;
+}
+
+// Transition / Transform Functions
+
+.fn-transform(...) {
+  -webkit-transform: @arguments;
+  -moz-transform: @arguments;
+  -o-transform: @arguments;
+  -ms-transform: @arguments;
+  transform: @arguments;
+}
+
+.fn-transform-origin(@origin) {
+  -webkit-transform-origin: @origin;
+  -moz-transform-origin: @origin;
+  -ms-transform-origin: @origin;
+  transform-origin: @origin;
+}
+
+.fn-transform-style(@value) {
+  -webkit-transform-style: @value;
+  -moz-transform-style: @value;
+  -o-transform-style: @value;
+  -ms-transform-style: @value;
+  transform-style: @value;
+}
+
+.fn-transform-translate(@value) {
+  -webkit-transform: translate(@value);
+  -moz-transform: translate(@value);
+  -o-transform: translate(@value);
+  -ms-transform: translate(@value);
+  transform: translate(@value);
+}
+
+.fn-transition-transform(@duration:0.1s, @ease:ease-out) {
+  .fn-transition-property(-webkit-transform, @duration, @ease);
+  .fn-transition-property(-ms-transform, @duration, @ease);
+  .fn-transition-property(-o-transform, @duration, @ease);
+  .fn-transition-property(-moz-transform, @duration, @ease);
+  .fn-transition-property(transform, @duration, @ease);
+}
+
+.fn-transition(...) {
+  @props: ~`"@{arguments}".replace('[', '').replace(']', '')`;
+  -webkit-transition: @props;
+  -moz-transition: @props;
+  -o-transition: @props;
+  -ms-transition: @props;
+  transition: @props;
+}
+
+.fn-transition-property(@property:all, @duration:0.1s, @ease:ease-out) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition: @property @duration @ease;
+  -o-transition: @property @duration @ease;
+  -ms-transition: @property @duration @ease;
+  transition: @property @duration @ease;
+}
+
+.fn-transition-duration(@duration:0.1s) {
+  -webkit-transition-duration: @duration;
+  -moz-transition-duration: @duration;
+  -o-transition-duration: @duration;
+  -ms-transition-duration: @duration;
+  transition-duration: @duration;
+}
+
+.fn-transition-delay(@delay:0) {
+  -webkit-transition-delay: @delay;
+  -moz-transition-delay: @delay;
+  -o-transition-delay: @delay;
+  -ms-transition-delay: @delay;
+  transition-delay: @delay;
+}
+
+// Appearance Functions
+
+.fn-user-select(@value) {
+  -webkit-touch-callout: @value;
+  -webkit-user-select: @value;
+  -khtml-user-select: @value;
+  -moz-user-select: @value;
+  -ms-user-select: @value;
+  user-select: @value;
+}
+
+.fn-appearance(@appearance: none) {
+  -webkit-appearance: @appearance;
+  -moz-appearance: @appearance;
+  -ms-appearance: @appearance;
+  -o-appearance: @appearance;
+  appearance: @appearance;
+}
+
+.fn-backface-visibility(@valueisibility) {
+  -webkit-backface-visibility: @valueisibility;
+  -moz-backface-visibility: @valueisibility;
+  -o-backface-visibility: @valueisibility;
+  backface-visibility: @valueisibility;
+}
+
+.fn-perspective(@value) {
+  -webkit-perspective: @value;
+  -moz-perspective: @value;
+  -o-perspective: @value;
+  -ms-perspective: @value;
+  perspective: @value;
+}
+
+.fn-box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.fn-filter-grayscale(@value) {
+  -webkit-filter: grayscale(@value);
+  -moz-filter: grayscale(@value);
+  -o-filter: grayscale(@value);
+  filter: grayscale(@value);
+}

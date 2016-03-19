@@ -1,0 +1,87 @@
+.button-grid {
+  table-layout: fixed;
+
+  td {
+    width: auto;
+  }
+}
+
+
+.btn {
+  background: blue;
+  font-size: 1em;
+  display: block;
+  padding: 0;
+  .fn-appearance(none);
+  border: none;
+  outline: none;
+  .font-lcars;
+  color: @black;
+  vertical-align: top !important;
+  height: 3em;
+
+  &.btn-round {
+    border-radius: 100em;
+  }
+  
+  &.flat-left,
+  &.btn-round.cap-left {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  &.flat-right,
+  &.btn-round.cap-right {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  &.cap-left:before,
+  &.cap-right:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 2em;
+    background: red;
+    vertical-align: bottom;
+    font-size: 100%;
+  }
+
+  &.cap-left:before {
+    border-top-left-radius: 100em;
+    border-bottom-left-radius: 100em;
+    margin-right: .25em;
+  }
+
+  &.cap-right:after {
+    border-top-right-radius: 100em;
+    border-bottom-right-radius: 100em;
+  }
+  
+  &.cap-right {
+  }
+
+  &.pipe-left {
+  }
+  
+  &.pipe-right {
+  }
+
+  .label-inner {
+    display: inline-block;
+    vertical-align: bottom;
+    background: yellow;
+    padding: .3em;
+    box-sizing: padding-box;
+  }
+
+  .label-outer {
+    display: inline-block;
+    height: 100%;
+    font-size: 415%;
+    line-height: .82em;
+    vertical-align: bottom;
+    color: #fff;
+  }
+
+}
